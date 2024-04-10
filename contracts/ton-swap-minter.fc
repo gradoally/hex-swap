@@ -1,0 +1,27 @@
+global cell owners;
+global cell swaps;
+global cell config;
+
+() calculate_swap_contract_state_init(int index) {
+    
+}
+
+() calculate_swap_contract_addr(cell state_init) {
+
+}
+
+() recv_internal(int my_balance, int msg_value, cell in_msg_full, slice in_msg_body) impure {
+
+    ;; if from collection X that free
+
+    if (op = op::transfer_notification()) {
+
+        ;; if all nft from swap came in than mint 
+
+    }
+    
+}
+
+() get_index() {
+
+}
