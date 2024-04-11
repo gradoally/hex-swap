@@ -1,0 +1,60 @@
+global cell owners;
+global cell swaps; ;; slice peer_addr // int deal_status, slice initiator_address,  int timeout, int amount, cell initiator_nft, cell initiator_jettons, int peer_amount, cell peer_nft, cell peer_jetton
+global cell config;
+
+;; Deal statuses
+;; initiated
+;; active (assets onboarded)
+
+;; NFT Check
+global cell nft_item_code;
+global cell nft_collection_addr;
+
+
+cell calculate_nft_item_state_init(int item_index, cell nft_item_code) {
+  cell data = begin_cell().store_uint(item_index, 64).store_slice(my_address()).end_cell();
+  return begin_cell().store_uint(0, 2).store_dict(nft_item_code).store_dict(data).store_uint(0, 1).end_cell();
+}
+
+slice calculate_nft_item_address(int wc, cell state_init) {
+  return begin_cell().store_uint(4, 3)
+                     .store_int(wc, 8)
+                     .store_uint(cell_hash(state_init), 256)
+                     .end_cell()
+                     .begin_parse();
+}
+
+() calculate_swap_contract_state_init(int index) {
+    
+}
+
+() calculate_swap_contract_addr(cell state_init) {
+
+}
+
+
+() recv_internal(int my_balance, int msg_value, cell in_msg_full, slice in_msg_body) impure {
+
+    if (op = op::start_deal) {
+      
+    }
+
+    ;; if from collection X that free
+
+    if (op = op::transfer_notification()) {
+
+        ;; Onboard NFT
+
+    }
+
+    if (op = op::op::transfer_notification()) {
+    
+      ;; Onboard Jettons
+
+    }
+    
+}
+
+() get_index() {
+
+}
