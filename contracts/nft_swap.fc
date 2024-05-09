@@ -41,6 +41,10 @@ slice calculate_nft_item_address(int wc, cell state_init) {
 
 }
 
+() conduct_deal(int hello_world) {
+
+}
+
 () save_data() impure inline {
     ~strdump("Start save_data()");
     set_data(
@@ -86,21 +90,21 @@ slice calculate_nft_item_address(int wc, cell state_init) {
 
     if (op = op::transfer_notification()) {
 
-      ;; Onboard NFT
-
-      ;; check if all assets onboarded
-
-
+      if () { ;; all assets in
+        conduct_deal();
+      }
 
     }
 
     if (op = op::op::transfer_notification()) {
-    
-      ;; Onboard Jettons
 
-      ;; check if all jettons 
+      if () { ;; all assets in
+        conduct_deal();
+      }
 
     }
+
+    if ()
     
 }
 
